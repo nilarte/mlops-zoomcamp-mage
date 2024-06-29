@@ -18,11 +18,13 @@ blocks:
       chart_type: custom
     data_source:
       block_uuid: dashboard_data_source
+      partitions: 0
       pipeline_schedule_id: null
       pipeline_uuid: xgboost_training
       type: block
     error: null
     name: SHAP values bar
+    name_new: SHAP values bar
     skip_render: false
     type: chart
     uuid: shap_values_bar
@@ -41,11 +43,10 @@ blocks:
     type: chart
     uuid: shap_values_force_chart
 layout:
-- - block_uuid: shap_values_bar
-    height: 400
+- - block_uuid: shap_values
     width: 1
-  - block_uuid: shap_values
-    height: 400
+  - block_uuid: shap_values_bar
+    height: 0
     width: 1
 - - block_uuid: shap_values_force_chart
     width: 1

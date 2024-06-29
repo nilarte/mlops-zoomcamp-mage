@@ -68,6 +68,27 @@ blocks:
     skip_render: false
     type: chart
     uuid: total_runs_by_model
+  training_metrics_2__rmse_:
+    configuration:
+      chart_type: time series line chart
+      group_by:
+      - start_time_seconds
+      metrics:
+      - aggregation: average
+        column: rmse_Booster
+      - aggregation: average
+        column: rmse_LinearRegression
+      - aggregation: average
+        column: rmse_Lasso
+      time_interval: minute
+    data_source:
+      type: chart_code
+    error: null
+    name: Training metrics 2 (RMSE)
+    name_new: Training metrics 2 (RMSE)
+    skip_render: false
+    type: chart
+    uuid: training_metrics_2__rmse_
   training_metrics__rmse_:
     configuration:
       chart_type: time series line chart
@@ -75,8 +96,7 @@ blocks:
         x_grid_lines_hidden: true
         y_grid_lines_hidden: true
         y_values_smooth: true
-      group_by:
-      - start_time
+      group_by: []
       metrics:
       - aggregation: average
         column: rmse_Booster
@@ -112,4 +132,6 @@ layout:
     max_width_percentage: 0
     width: 2
   - block_uuid: runs_by_model__pie_chart_
+    width: 1
+- - block_uuid: training_metrics_2__rmse_
     width: 1
