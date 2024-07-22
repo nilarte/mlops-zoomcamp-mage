@@ -38,8 +38,8 @@ def load_data(*args, **kwargs) -> pd.DataFrame:
         processed_rows = []
         for row in rows:
             run_uuid, run_id, model, start_time, mse, rmse = row
-            start_time = datetime.utcfromtimestamp(start_time / 1000)
-            #start_time = datetime.fromtimestamp(start_time / 1000, tz=timezone.utc)
+            #start_time = datetime.utcfromtimestamp(start_time / 1000)
+            start_time = datetime.fromtimestamp(start_time / 1000, tz=timezone.utc)
             start_time_day = start_time.day
             start_time_hour = start_time.hour
             start_time_minute = start_time.minute
