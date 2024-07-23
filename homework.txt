@@ -1,0 +1,24 @@
+What's the version of Mage we run? 0.9.72
+--------
+How many lines are in the created metadata.yaml file? 55
+--------
+Let's create an ingestion code block.
+
+In this block, we will read the March 2023 Yellow taxi trips data.
+
+How many records did we load?
+3,403,766
+
+------------
+We will need to create a transformer code block and put this code there.
+What's the size of the result?
+
+3,316,216
+--------------
+Question 5. Train a model
+Hint: print the intercept_ field in the code block
+24.77
+-----
+
+Question 6. Register the model
+Model size: 4,534
